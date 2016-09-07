@@ -3,13 +3,5 @@ using System.Collections;
 
 public class AComponent : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    protected APawn pawn;
 }

@@ -3,10 +3,13 @@ using System.Collections;
 
 public class APawn : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public MoveComponent move;
+
+    // Use this for initialization
+    protected virtual void Start ()
+    {
+        move = GetComponent<MoveComponent>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
