@@ -19,6 +19,7 @@ public class MoveComponent : AComponent {
     const float groundedRadius = .2f;
     public LayerMask groundLayer;
     bool bGrounded = true;
+    public bool GetGrounded() { return bGrounded; }
 
     void Start()
     {
