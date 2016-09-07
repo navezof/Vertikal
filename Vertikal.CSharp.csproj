@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\AComponent.cs" />
     <Compile Include="Assets\Scripts\AController.cs" />
     <Compile Include="Assets\Scripts\APawn.cs" />
+    <Compile Include="Assets\Scripts\AheadCamera.cs" />
     <Compile Include="Assets\Scripts\MoveComponent.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerPawn.cs" />

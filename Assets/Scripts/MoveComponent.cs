@@ -6,6 +6,7 @@ public class MoveComponent : AComponent {
     bool bVerticalEnabled = false;
     bool bHorizontalEnabled = true;
     bool bFacingRight = true;
+    public bool GetFacingRight() { return bFacingRight; }
 
     Rigidbody2D body;
     StealthComponent stealth;
