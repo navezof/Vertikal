@@ -75,11 +75,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AAction.cs" />
     <Compile Include="Assets\Scripts\AComponent.cs" />
     <Compile Include="Assets\Scripts\AController.cs" />
+    <Compile Include="Assets\Scripts\ADecorator.cs" />
     <Compile Include="Assets\Scripts\APawn.cs" />
+    <Compile Include="Assets\Scripts\Act_Hide.cs" />
+    <Compile Include="Assets\Scripts\Act_Observe.cs" />
     <Compile Include="Assets\Scripts\AheadCamera.cs" />
+    <Compile Include="Assets\Scripts\Dec_IsClass.cs" />
+    <Compile Include="Assets\Scripts\Hideout.cs" />
+    <Compile Include="Assets\Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\InteractionComponent.cs" />
     <Compile Include="Assets\Scripts\MoveComponent.cs" />
+    <Compile Include="Assets\Scripts\Observation.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerPawn.cs" />
     <Compile Include="Assets\Scripts\StealthComponent.cs" />

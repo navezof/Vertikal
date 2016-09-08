@@ -15,7 +15,7 @@ public class MoveComponent : AComponent {
     public bool bAirControl;
     public float maxSpeed;
 
-    public Transform groundCheck;
+    Transform groundCheck;
     const float groundedRadius = .2f;
     public LayerMask groundLayer;
     bool bGrounded = true;

@@ -6,6 +6,7 @@ public class PlayerController : AController {
     PlayerPawn pawn;
     StealthComponent stealth;
     MoveComponent move;
+    InteractionComponent interaction;
 
 	// Use this for initialization
 	void Start ()
@@ -13,6 +14,7 @@ public class PlayerController : AController {
         pawn = GetComponent<PlayerPawn>();
         stealth = GetComponent<StealthComponent>();
         move = GetComponent<MoveComponent>();
+        interaction = GetComponent<InteractionComponent>();
 	}
 	
     void FixedUpdate()
@@ -31,6 +33,11 @@ public class PlayerController : AController {
 
             float verticalMove = Input.GetAxis("Vertical");
             move.VerticalMove(verticalMove);
+        }
+        if (interaction)
+        {
+            if (Input.GetButtonDown("use"))
+                interaction.CloseInteraction();
         }
     }
 }

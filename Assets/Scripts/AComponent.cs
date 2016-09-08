@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AComponent : MonoBehaviour {
+public abstract class AComponent : MonoBehaviour {
 
     protected APawn pawn;
+
+    protected virtual void Start()
+    {
+        pawn = GetComponent<APawn>();
+    }
 }
