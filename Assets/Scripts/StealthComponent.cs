@@ -7,6 +7,28 @@ public class StealthComponent : AComponent {
 
     public float bStealthSpeed;
 
+    void OnEnable()
+    {
+        PlayerController.OnStealthInput += StealthInput;
+    }
+
+    void OnDisable()
+    {
+        PlayerController.OnStealthInput -= StealthInput;
+    }
+
+    void StealthInput()
+    {
+        if (bStealth)
+        {
+            ExitStealth();
+        }
+        else
+        {
+            EnterStealth();
+        }
+    }
+
     public void EnterStealth()
     {
         print("Enter stealth");

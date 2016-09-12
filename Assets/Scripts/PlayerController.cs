@@ -4,7 +4,10 @@ using System.Collections;
 public class PlayerController : AController {
 
     PlayerPawn pawn;
-    StealthComponent stealth;
+
+    public delegate void OnInputAction();
+    public static event OnInputAction OnStealthInput;
+
     MoveComponent move;
     InteractionComponent interaction;
 
@@ -12,20 +15,14 @@ public class PlayerController : AController {
 	void Start ()
     {
         pawn = GetComponent<PlayerPawn>();
-        stealth = GetComponent<StealthComponent>();
         move = GetComponent<MoveComponent>();
         interaction = GetComponent<InteractionComponent>();
 	}
 	
     void FixedUpdate()
-    {
-        if (stealth)
-        {
-            if (Input.GetButtonDown("crouch"))
-                stealth.EnterStealth();
-            if (Input.GetButtonUp("crouch"))
-                stealth.ExitStealth();
-        }
+    {        
+        if (OnStealthInput != null && (Input.GetButtonDown("crouch") || Input.GetButtonUp("crouch")))
+            OnStealthInput();
         if (move)
         {
             float horizontalMove = Input.GetAxis("Horizontal");
